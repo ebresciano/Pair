@@ -11,7 +11,17 @@ import CoreData
 
 
 class Person: NSManagedObject {
+    
+    
+    convenience init?(name: String, group: Group, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+        
+        guard let entity = NSEntityDescription.entityForName("Person", inManagedObjectContext: context) else {return nil}
+        
+         self.init(entity: entity, insertIntoManagedObjectContext: context)
+         self.name = name
+         self.group = group 
 
-// Insert code here to add functionality to your managed object subclass
+
+
 
 }
