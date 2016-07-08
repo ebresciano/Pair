@@ -9,7 +9,9 @@
 import UIKit
 
 class GroupTableViewCell: UITableViewCell {
-
+    
+       @IBOutlet weak var nameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,12 @@ class GroupTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func updateWithPerson(person: Person) {
+        nameLabel.text = person.name
+    }
+    
+   
 }
+
+

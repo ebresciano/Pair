@@ -18,6 +18,7 @@
 		CC8039901D300152005C1BC1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80398E1D300152005C1BC1 /* Person.swift */; };
 		CC8039931D3001BB005C1BC1 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8039921D3001BB005C1BC1 /* Stack.swift */; };
 		CC8039951D3003E8005C1BC1 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8039941D3003E8005C1BC1 /* GroupController.swift */; };
+		CC8039991D30066E005C1BC1 /* GroupListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8039981D30066E005C1BC1 /* GroupListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CC80398E1D300152005C1BC1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CC8039921D3001BB005C1BC1 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		CC8039941D3003E8005C1BC1 /* GroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
+		CC8039981D30066E005C1BC1 /* GroupListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				CC8039611D2FFC2D005C1BC1 /* AppDelegate.swift */,
 				CC8039911D30018B005C1BC1 /* CORE DATA */,
 				CC8039961D300402005C1BC1 /* MODEL CONTROLLER */,
+				CC80399A1D30067A005C1BC1 /* VIEW CONTROLLER */,
 				CC8039651D2FFC2D005C1BC1 /* Main.storyboard */,
 				CC80396B1D2FFC2D005C1BC1 /* Assets.xcassets */,
 				CC80396D1D2FFC2D005C1BC1 /* LaunchScreen.storyboard */,
@@ -105,6 +108,14 @@
 				CC8039881D300053005C1BC1 /* Group.swift */,
 			);
 			name = MODEL;
+			sourceTree = "<group>";
+		};
+		CC80399A1D30067A005C1BC1 /* VIEW CONTROLLER */ = {
+			isa = PBXGroup;
+			children = (
+				CC8039981D30066E005C1BC1 /* GroupListTableViewController.swift */,
+			);
+			name = "VIEW CONTROLLER";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 				CC8039891D300053005C1BC1 /* Group.swift in Sources */,
 				CC8039871D300046005C1BC1 /* Group+CoreDataProperties.swift in Sources */,
 				CC8039951D3003E8005C1BC1 /* GroupController.swift in Sources */,
+				CC8039991D30066E005C1BC1 /* GroupListTableViewController.swift in Sources */,
 				CC80398F1D300152005C1BC1 /* Person+CoreDataProperties.swift in Sources */,
 				CC8039931D3001BB005C1BC1 /* Stack.swift in Sources */,
 				CC80398C1D300089005C1BC1 /* Pair.xcdatamodeld in Sources */,

@@ -13,18 +13,15 @@ class GroupListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    // MARK: - Outlets
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    @IBOutlet weak var groupLabel: UILabel!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -35,6 +32,39 @@ class GroupListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    
+    // MARK: - Actions 
+
+   
+    @IBAction func addButtonTapped(sender: AnyObject) {
+        presentAlertController()
+    }
+    
+    
+    
+    //MARK: - Alert Controller
+    
+    func presentAlertController() {
+    
+        
+        let alertController = UIAlertController(title: "Add Person", message: nil, preferredStyle: .Alert)
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Name..."
+            nameTextField = textField
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        let createAction = UIAlertAction(title: "Add", style: .Default) { (_) in
+            guard let name = textField.text, where name.characters.count > 0  else { return }
+            GroupController.sharedController.addPersonToGroup(name: name, group: group)
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(createAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
+        
     }
 
     /*
