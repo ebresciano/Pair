@@ -1,5 +1,5 @@
 //
-//  Stack.swift
+//  Person.swift
 //  Pair Randomizer
 //
 //  Created by Eva Marie Bresciano on 7/8/16.
@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import CoreData
+
+
+class Person: NSManagedObject {
+
+// Insert code here to add functionality to your managed object subclass
+
+}
