@@ -14,7 +14,7 @@ import CoreData
 
 extension Group {
 
-    @NSManaged var title: String?
+    @NSManaged var title: String
     @NSManaged var people: NSSet?
 
 }
